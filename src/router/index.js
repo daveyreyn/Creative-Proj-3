@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import About from '../views/About.vue'
+import Browse from '../views/Browse.vue'
+import Mail from '../views/Mail.vue'
+import Bio from '../views/Bio.vue'
 
 Vue.use(VueRouter)
 
@@ -11,11 +13,21 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  {
-    path: '/about',
-    name: 'About',
-    component: About
-  }
+	{
+  path: '/browse',
+  name: 'Browse',
+  component: Browse
+	},
+	{
+	path: '/mail',
+  name: 'Mail',
+  component: Mail
+	},
+	{
+	path: '/bio',
+  name: 'Bio',
+  component: Bio
+	},
 ]
 
 const router = new VueRouter({

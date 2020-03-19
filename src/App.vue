@@ -1,37 +1,84 @@
 <template>
 <div id="app">
-  <div class="header">
-    <h1>Provo Artists</h1>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="menu">
+    <div id="brand">
+      <router-link to="/">
+        <img src="/images/record.png">
+      </router-link>
+    </div>
+    <div id="side">
+      <router-link to="/browse">
+        <div class="menu-item browse">
+          <img src="/images/icon.png">
+          <p>Genres</p>
+        </div>
+      </router-link>
+      <router-link to="/mail">
+        <div class="menu-item">
+          <img src="/images/icon.png">
+          <p>Mailing</p>
+        </div>
+      </router-link>
     </div>
   </div>
-  <div class="content">
-    <router-view />
-  </div>
+  <router-view />
 </div>
 </template>
 
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  box-sizing: border-box;
 }
 
-#nav {
-  padding: 30px;
+body {
+  margin: 50px 100px;
+
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+#menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-template-areas: "none brand side";
+  margin-bottom: 50px;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+#menu a {
+  color: #e50000;
+}
+
+#brand {
+  grid-area: brand;
+  display: flex;
+  justify-content: center;
+}
+
+#brand img {
+  height: 200px;
+}
+
+#side {
+  grid-area: side;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#side img {
+  width: 50px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item p {
+  margin-top: 5px;
+	margin-right: 10px;
+}
+
+.browse {
+  margin-right: 50px;
 }
 </style>

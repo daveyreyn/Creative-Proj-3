@@ -1,18 +1,32 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+
+  <div class="wrapper">
   </div>
+  <BandList :bands="bands" />
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
+import BandList from "../components/BandList.vue"
 export default {
   name: 'Home',
   components: {
-    HelloWorld
-  }
+    BandList
+  },
+  computed: {
+		bands() {
+			return this.$root.$data.bands;
+		}
+  },
 }
 </script>
+
+<style scoped>
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
