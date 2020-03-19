@@ -19,7 +19,16 @@
 
     </div>
   </div>
+
+	<div class="footer">
+		<button class="gitButton" v-on:click="onClickButton">Github</button>
+	</div>
+
+
+
 </div>
+
+
 </template>
 
 <script>
@@ -33,7 +42,10 @@ export default {
 			this.$root.$data.bandBio = [];
 			this.$root.$data.bandBio.push(band);
 			this.$router.push("/bio")
-    }
+    },
+		onClickButton(){
+			location.href = "https://github.com/daveyreyn/Creative-Proj-3";
+		}
   },
 }
 </script>
@@ -104,7 +116,21 @@ button {
   border: none;
 }
 
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 42px;
+	line-height: 32px;
+	width: 100%;
+	background-color: grey;
+	color: gainsboro;
+	text-align: center;
+}
 
+.gitButton {
+	background-color: #848484;
+}
 
 .auto {
   margin-left: auto;

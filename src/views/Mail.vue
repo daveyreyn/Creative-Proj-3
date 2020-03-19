@@ -12,6 +12,11 @@
     <p>Thank you for subscribing to our mailing list!</p>
     <p><a @click="toggleForm" href="#">Submit another email</a></p>
   </div>
+
+	<div class="footer">
+		<button class="gitButton" v-on:click="onClickButton">Github</button>
+	</div>
+
 </div>
 </template>
 
@@ -34,6 +39,9 @@ export default {
       this.problem = "";
       this.creating = false;
     },
+		onClickButton(){
+			location.href = "https://github.com/daveyreyn/Creative-Proj-3";
+		}
   }
 }
 </script>
@@ -53,7 +61,29 @@ textarea {
 }
 
 button {
-  margin-top: 20px;
-  font-size: 1.2em;
+	height: 40px;
+	background: #000;
+	color: white;
+	border: none;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 42px;
+	line-height: 32px;
+	width: 100%;
+	background-color: grey;
+	color: gainsboro;
+	text-align: center;
+}
+
+.gitButton {
+	background-color: #848484;
+	height: 50px;
+  background: #848484;
+  color: white;
+  border: none;
 }
 </style>

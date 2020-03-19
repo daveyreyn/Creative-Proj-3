@@ -24,7 +24,9 @@
 
 	</div>
 
-
+	<div class="footer">
+		<button class="gitButton" v-on:click="onClickButton">Github</button>
+	</div>
 
 </div>
 </template>
@@ -42,7 +44,12 @@ export default {
 				return false;
 			}
     }
-  }
+  },
+	methods: {
+		onClickButton(){
+			location.href = "https://github.com/daveyreyn/Creative-Proj-3";
+		}
+	}
 }
 </script>
 
@@ -87,6 +94,26 @@ export default {
 .info p {
   margin: 0px;
   font-size: 20px;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 42px;
+	line-height: 32px;
+	width: 100%;
+	background-color: grey;
+	color: gainsboro;
+	text-align: center;
+}
+
+.gitButton {
+	background-color: #848484;
+	height: 50px;
+  background: #848484;
+  color: white;
+  border: none;
 }
 
 

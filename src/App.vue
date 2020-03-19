@@ -6,6 +6,7 @@
         <img src="/images/record.png">
       </router-link>
     </div>
+			<h1 style="text-align:center;">Welcome to Provo Records</h1>
     <div id="side">
       <router-link to="/browse">
         <div class="menu-item browse">
